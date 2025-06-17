@@ -6,18 +6,18 @@
  * Description:    Hello Elementor is a lightweight...
  */
 
- /* Pour que le lien Admin ait le même style que les autres onglets du menu */
+ /* Pour que le lien Admin ait le meme style que les autres onglets du menu */
 .menu-item.admin {
   display: inline-block;
   margin: 0;
-  padding: 0 1em; /* même padding horizontal que les autres éléments */
+  padding: 0 1em; /* meme padding horizontal que les autres elements */
   vertical-align: middle;
 }
 
 .menu-item.admin a {
   color: #000 !important;         /* noir */
-  font-family: inherit;           /* même police que le reste du menu */
-  font-size: 16px;                /* ajuste si nécessaire selon les autres onglets */
+  font-family: inherit;           /* meme police que le reste du menu */
+  font-size: 16px;                /* ajuste si necessaire selon les autres onglets */
   font-weight: 500;               /* ou normal, selon ton design */
   text-decoration: none;
   padding: 0.7em 0;
@@ -26,7 +26,7 @@
 }
 
 .menu-item.admin a:hover {
-  color: #444 !important; /* effet léger au survol */
+  color: #444 !important; /* effet leger au survol */
 }
 
 /*canette et feuilles*/
@@ -34,7 +34,7 @@
   position: relative;
   width: fit-content;
   margin:  auto;
-  height: 700px; /* ajuste si nécessaire */
+  height: 700px; /* ajuste si necessaire */
 }
 
 .feuille-gauche,
@@ -47,7 +47,7 @@
 }
 
 .feuille-gauche {
-  left: -320px; /* ajusté pour coller à la canette */
+  left: -320px; /* ajuste pour coller a la canette */
   transform: rotate(180deg); /* effet miroir pour la gauche */
 }
 
@@ -98,3 +98,206 @@
 .rotation-vecteur img {
   transform: rotate(-70deg);
 }
+/*commander*/
+/* === SECTION GeNeRALE === */
+.commande-section {
+  padding: 40px 20px;
+  background: #3B8E46;
+  color: white;
+  text-align: left;
+}
+
+.commande-section h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: white;
+}
+
+/* === WRAPPER DES IMAGES === */
+.commande-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+/* === BLOC PARFUM === */
+.flavor-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 140px;
+}
+
+/* === WRAPPER IMAGE + TEXTE === */
+.flavor-image-wrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.flavor-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* === TEXTE DANS LIMAGE === */
+.flavor-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1.2;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  pointer-events: none;
+	
+	 /*  AJOUT POUR CENTRER LE TEXTE */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+/* === CHAMP DE QUANTITE === */
+.flavor-item input[type="number"] {
+  margin-top: 10px;
+  width: 50px;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* === LIGNE SEPARATRICE === */
+.section-divider {
+  margin-top: 40px;
+  width: 100%;
+  border: none;
+  border-top: 1px solid white;
+}
+
+
+
+
+
+
+
+
+/* ZONE FORMULAIRE */
+.commande-section {
+  background-color: #3B8E46;
+  padding: 40px 20px;
+  color: white;
+}
+
+/*  Champs */
+.form-column input[type="text"],
+.form-column input[type="email"],
+.form-column textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: none;
+  padding: 16px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Syne', sans-serif;
+}
+
+/*  Structure en 2 colonnes */
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.form-column {
+  flex: 1 1 45%;
+}
+
+.form-column h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-family: 'Syne', sans-serif;
+  color: white;
+}
+
+/*  Label */
+.form-column label {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Syne', sans-serif;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/*  Trait vertical entre les colonnes */
+.form-grid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: white;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Bouton envoyer */
+.form-submit-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.form-submit-wrapper input[type="submit"],
+.wpcf7 form .wpcf7-submit {
+  background-color: #E3BEB4;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: 'Syne', sans-serif;
+}
+
+.form-submit-wrapper input[type="submit"]:hover,
+.wpcf7 form .wpcf7-submit:hover {
+  background-color: #d3a79c;
+}
+
+
