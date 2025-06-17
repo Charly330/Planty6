@@ -6,11 +6,34 @@
  * Description:    Hello Elementor is a lightweight...
  */
 
- /*canette et feuilles*/
+ /* Pour que le lien Admin ait le même style que les autres onglets du menu */
+.menu-item.admin {
+  display: inline-block;
+  margin: 0;
+  padding: 0 1em; /* même padding horizontal que les autres éléments */
+  vertical-align: middle;
+}
+
+.menu-item.admin a {
+  color: #000 !important;         /* noir */
+  font-family: inherit;           /* même police que le reste du menu */
+  font-size: 16px;                /* ajuste si nécessaire selon les autres onglets */
+  font-weight: 500;               /* ou normal, selon ton design */
+  text-decoration: none;
+  padding: 0.7em 0;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.menu-item.admin a:hover {
+  color: #444 !important; /* effet léger au survol */
+}
+
+/*canette et feuilles*/
 .bloc-canette {
   position: relative;
   width: fit-content;
-  margin: 0 auto;
+  margin:  auto;
   height: 700px; /* ajuste si nécessaire */
 }
 
@@ -46,6 +69,8 @@
     left: -150px;
     right: -150px;
   }
+}
+
 
 /* police du titre*/
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
@@ -62,75 +87,8 @@
   display: block;
 }
 
+
 /* Dans nous rencontrer */
-/*une version simplifiée du CSS responsive */
-/* Section équipe */
-.equipe-liste {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  text-align: center;
-  margin: 40px 0;
-}
-
-.equipe-membre {
-  width: 150px;
-}
-
-.equipe-membre img {
-  width: 100%;
-  border-radius: 50%;
-}
-
-/* Formulaire contact */
-.section-contact form {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.section-contact input,
-.section-contact textarea {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
-/* Décor feuille */
-.feuille-droite {
-  width: 80px;
-  position: absolute;
-  top: 150px;
-  right: 20px;
-  z-index: 0;
-}
-
-/* Ligne de canettes */
-.footer-canettes {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.footer-canettes img {
-  width: 100%;
-  height: auto;
-}
-@media (max-width: 768px) {
-  .equipe-liste {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .feuille-droite {
-    display: none;
-  }
-
-  .section-contact form {
-    padding: 10px;
-  }
-}
-
 .centre-bouton .wpforms-submit {
   display: block;
   margin: 20px auto 0 auto;
@@ -139,162 +97,4 @@
 
 .rotation-vecteur img {
   transform: rotate(-70deg);
-}
-
-/* Dans commander */
-.quantite-box {
-  width: 40px;
-  height: 40px;
-  background-color: white;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 6px;
-  margin-top: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-/* Formulaire dans commander */
-
-/* admin */
-.menu-item.admin a {
-  color: #000 !important;
-  padding: 0.5em 0;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.menu-item.admin {
-  margin: 0;
-  padding: 0;
-}
-
-/* essai : style du formulaire */
-/* TITRES FORMULAIRE EN GRAS */
-.form-column h3 {
-  font-size: 20px;
-  color: white;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-/* CHAMPS DE FORMULAIRE */
-.form-column input[type="text"],
-.form-column input[type="email"],
-.form-column textarea {
-  width: 100%;
-  max-width: 383px;
-  height: 71px;
-  border-radius: 7px;
-  background-color: #ffffff;
-  border: none;
-  padding: 16px;
-  font-size: 16px;
-  box-sizing: border-box;
-  margin-bottom: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
-}
-
-/* STRUCTURE EN 2 COLONNES */
-.form-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
-  margin-bottom: 30px;
-  position: relative;
-}
-
-.form-column {
-  flex: 1 1 45%;
-}
-
-/* SÉPARATEUR VERTICAL AU MILIEU DES COLONNES */
-.form-grid::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 2px;
-  background-color: white;
-  transform: translateX(-50%);
-  z-index: 0;
-}
-
-/* STYLISATION DES LABELS */
-.form-column label {
-  color: white;
-  font-weight: normal;
-  display: block;
-  margin-bottom: 10px;
-}
-
-/* BOUTON ENVOYER CENTRE*/
-.wpcf7 form .wpcf7-submit {
-  display: inline-block;
-  margin: 0 auto;
-  background-color: #E3BEB4;
-  border: none;
-  padding: 16px 32px;
-  border-radius: 7px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-.wpcf7 form .wpcf7-submit:hover {
-  background-color: #d3a79c;
-}
-
-/* BOUTON a cacher */
-.wpcf7-submit:nth-of-type(2) {
-  display: none !important;
-}
-
-
-
-/* REPONSIVE POUR MOBILE */
-@media (max-width: 768px) {
-  .form-grid {
-    flex-direction: column;
-  }
-
-  .form-column {
-    flex: 1 1 100%;
-  }
-
-  .form-column input[type="text"],
-  .form-column input[type="email"],
-  .form-column textarea {
-    max-width: 100%;
-  }
-
-  .form-grid::before {
-    display: none;
-  }
-}
-
-/* SEPARATEUR AU MILIEU DES 4 IMAGES */
-.images-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  position: relative;
-}
-
-.images-row::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 2px;
-  background: white;
-  transform: translateX(-50%);
-  z-index: 1;
 }
